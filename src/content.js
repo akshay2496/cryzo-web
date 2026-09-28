@@ -17,9 +17,9 @@ import {
 export const BRAND = {
   name: 'CRYZO',
   tagline: 'Restaurant POS, Billing & Management System',
-  // Same support contact used in frontend/src/pages/SubscriptionExpired.jsx
+  // Public contact (phone same as frontend/src/pages/SubscriptionExpired.jsx)
   phone: '+91 8087841660',
-  email: 'akshaykadam240596@gmail.com',
+  email: 'info@cryzent.in',
 };
 
 export const whatsappNumber = BRAND.phone.replace(/[^0-9]/g, '');

@@ -5,6 +5,7 @@ import {
 import { SectionHeading } from './Primitives';
 import { PRIVACY_PATH } from '../legal/legalConfig';
 import { demoApiConfigured, submitDemoRequest } from '../services/api';
+import { DEMO_API_URL as DEMO_URL_FOR_LOGS } from '../config';
 import { FAQS, BRAND, whatsappNumber, OUTLET_COUNTS } from '../content';
 
 const inr = (n) => `₹${Number(n).toLocaleString('en-IN', { maximumFractionDigits: 2 })}`;
@@ -285,8 +286,11 @@ export function DemoSection({ plan, onPlanChange, plans = [] }) {
           document.getElementById(`${uid}-${Object.keys(r.errors)[0]}`)?.focus();
           return;
         }
+        // Visible in the browser console (F12) to help diagnose server / CORS / email problems
+        console.warn(`[CRYZO] Demo request failed: HTTP ${r.status}${r.message ? ` — ${r.message}` : ''} (${DEMO_URL_FOR_LOGS})`);
         setState({ status: 'handoff', failed: true, f, reason: r.message });
-      } catch {
+      } catch (err) {
+        console.warn(`[CRYZO] Demo request could not reach the server (${DEMO_URL_FOR_LOGS}) — check VITE_API_URL and the backend CORS_ORIGINS.`, err);
         setState({ status: 'handoff', failed: true, f });
       }
       return;
