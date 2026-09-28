@@ -18,7 +18,7 @@ export const BRAND = {
   name: 'CRYZO',
   tagline: 'Restaurant POS, Billing & Management System',
   // Public contact (phone same as frontend/src/pages/SubscriptionExpired.jsx)
-  phone: '+91 8087841660',
+  phone: '+91 8169612293',
   email: 'info@cryzent.in',
 };
 
