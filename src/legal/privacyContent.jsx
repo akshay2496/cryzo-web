@@ -70,6 +70,19 @@ export const PRIVACY = {
       ],
     },
     {
+      id: 'android-permissions',
+      title: 'Android app permissions',
+      blocks: [
+        <p key="0">The {BRAND.name} Android POS app asks only for the device permissions it needs:</p>,
+        <ul key="1">
+          <li><strong>Internet and network state</strong> — to connect to the {BRAND.name} servers and sync orders in real time.</li>
+          <li><strong>Bluetooth (connect and scan)</strong> — only to find and connect to Bluetooth thermal printers for printing bills and KOTs. The app does not use Bluetooth to determine your location.</li>
+          <li><strong>Microphone</strong> — used only when you choose to use a voice feature in the app. Audio is not recorded in the background and is not stored by us.</li>
+        </ul>,
+        <p key="2">You can deny or revoke these permissions at any time in your phone’s settings; the related feature (for example printing) will then stop working.</p>,
+      ],
+    },
+    {
       id: 'how-we-use',
       title: 'How we use information',
       blocks: [

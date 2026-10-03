@@ -19,7 +19,7 @@ export const BRAND = {
   tagline: 'Restaurant POS, Billing & Management System',
   // Public contact (phone same as frontend/src/pages/SubscriptionExpired.jsx)
   phone: '+91 8169612293',
-  email: 'info@cryzent.in',
+  email: 'info@cryzo.shop',
 };
 
 export const whatsappNumber = BRAND.phone.replace(/[^0-9]/g, '');

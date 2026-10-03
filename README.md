@@ -50,7 +50,7 @@ The demo form sends its details to the CRYZO backend, which emails them to you (
 
 - Endpoint: `POST /api/public/demo-request` — `backend/routes/demoRequest.js` + `backend/controllers/demoRequestController.js` (5 requests per IP per hour, honeypot spam check).
 - Email is sent with the backend's existing mailer (`backend/utils/mailer.js`: SMTP or SendGrid settings in the backend `.env`). Reply-To is set to the visitor's email, so you can reply directly.
-- Recipient: `DEMO_NOTIFY_EMAIL` in the backend `.env` (comma-separated for several people). If not set, it goes to info@cryzent.in.
+- Recipient: `DEMO_NOTIFY_EMAIL` in the backend `.env` (comma-separated for several people). If not set, it goes to info@cryzo.shop.
 - In production, add the landing page's domain to the backend `CORS_ORIGINS`, and set `VITE_API_URL` in this project to the backend's public `/api` URL.
 
 ## SEO
