@@ -59,12 +59,7 @@ export default function LegalPage({ doc, kind }) {
               </ol>
             </nav>
             <h1 id="legal-title" className="mt-4 text-4xl font-extrabold tracking-tight text-ink sm:text-5xl">{doc.title}</h1>
-            {/* <p className="mt-4 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-slate-600">
-              <span className="inline-flex items-center gap-1.5"><CalendarDays size={16} className="text-brand-dark" aria-hidden="true" /> Last updated: {LEGAL.effectiveDate}</span>
-              <button type="button" onClick={() => window.print()} className="lp-no-print inline-flex items-center gap-1.5 rounded-md font-semibold text-brand-text hover:underline">
-                <Printer size={16} aria-hidden="true" /> Print / save as PDF
-              </button>
-            </p> */}
+        
           </div>
         </section>
 
