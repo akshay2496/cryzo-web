@@ -11,7 +11,7 @@ import {
 export function CapabilityStrip() {
   const row = CAPABILITIES;
   return (
-    <section className="border-y border-slate-100 bg-white py-10" aria-labelledby="capabilities-title">
+    <section className="border-y border-slate-100 bg-white py-8 sm:py-10" aria-labelledby="capabilities-title">
       <h2 id="capabilities-title" className="px-4 text-center text-xs font-bold uppercase tracking-[0.2em] text-slate-500" data-reveal>
         Built for the way Indian restaurants work
       </h2>
@@ -61,7 +61,7 @@ function ShowcaseVisual({ visual }) {
 
 export function FeatureShowcase() {
   return (
-    <section id="features" className="bg-white py-20 sm:py-28" aria-labelledby="features-title">
+    <section id="features" className="bg-white py-14 sm:py-20 lg:py-28" aria-labelledby="features-title">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeading
           id="features-title"
@@ -70,7 +70,7 @@ export function FeatureShowcase() {
           intro="Each module is part of the same live system, so an order punched at a table shows up in the kitchen, the bill, the stock and the reports — instantly."
         />
 
-        <div className="mt-16 space-y-20 sm:space-y-28">
+        <div className="mt-10 space-y-14 sm:mt-16 sm:space-y-28">
           {SHOWCASE.map((row, i) => {
             const flip = i % 2 === 1;
             return (
@@ -110,7 +110,7 @@ export function FeatureShowcase() {
 /* ------------------------------ Module grid ------------------------------ */
 export function ModuleGrid() {
   return (
-    <section id="modules" className="bg-[#f8fafc] py-20 sm:py-24" aria-labelledby="modules-title">
+    <section id="modules" className="bg-[#f8fafc] py-14 sm:py-20 lg:py-24" aria-labelledby="modules-title">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeading
           id="modules-title"
@@ -118,7 +118,7 @@ export function ModuleGrid() {
           title="Everything included in CRYZO"
           intro="Turn modules on or off per outlet, and give every team member access only to what they need."
         />
-        <ul className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        <ul className="mt-8 grid gap-4 sm:mt-12 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {MODULES.map((m, i) => (
             <li key={m.title} className="lp-card lp-card-glow flex gap-4 p-5" data-reveal style={{ '--lp-delay': `${(i % 4) * 60}ms` }}>
               <span className="lp-icon-tile flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-[#fff1e3] text-brand-dark" aria-hidden="true">
@@ -144,7 +144,7 @@ export function ModuleGrid() {
 /* ---------------------- Dashboard showcase + how it works ---------------------- */
 export function DashboardShowcase() {
   return (
-    <section id="showcase" className="relative overflow-hidden bg-ink py-20 sm:py-28" aria-labelledby="showcase-title">
+    <section id="showcase" className="relative overflow-hidden bg-ink py-14 sm:py-20 lg:py-28" aria-labelledby="showcase-title">
       <div className="lp-blob lp-blob-orange left-1/2 top-20 h-[480px] w-[680px] -translate-x-1/2 opacity-30" aria-hidden="true" />
       <div className="lp-grid-bg" aria-hidden="true" />
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -155,7 +155,7 @@ export function DashboardShowcase() {
           title={<>Your whole restaurant, <span className="lp-gradient-text">live on one screen</span></>}
           intro="Daily sales, active orders, payment modes, best-sellers and low-stock items update as you trade. The preview below uses sample data."
         />
-        <div className="lp-tilt-wrap relative mt-14">
+        <div className="lp-tilt-wrap relative mt-10 sm:mt-14">
           <div className="lp-tilt"><DashboardPreview /></div>
           <div className="lp-float pointer-events-none absolute -top-9 left-10 z-10 hidden lg:block" aria-hidden="true">
             <div className="lp-glass rounded-2xl px-4 py-3">
@@ -172,7 +172,7 @@ export function DashboardShowcase() {
         </div>
 
         {/* How it works */}
-        <div className="mt-20">
+        <div className="mt-14 sm:mt-20">
           <h3 className="text-center text-2xl font-extrabold text-white sm:text-3xl" data-reveal>Up and running in three steps</h3>
           <ol className="relative mt-10 grid gap-5 md:grid-cols-3">
             {STEPS.map((s, i) => (
@@ -228,7 +228,7 @@ export function OutletSection({ selected, onSelect }) {
   };
 
   return (
-    <section id="solutions" className="bg-white py-20 sm:py-28" aria-labelledby="solutions-title">
+    <section id="solutions" className="bg-white py-14 sm:py-20 lg:py-28" aria-labelledby="solutions-title">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeading
           id="solutions-title"
@@ -295,7 +295,7 @@ export function OutletSection({ selected, onSelect }) {
 /* --------------------------------- Why CRYZO --------------------------------- */
 export function WhySection() {
   return (
-    <section id="about" className="bg-[#f8fafc] py-20 sm:py-28" aria-labelledby="about-title">
+    <section id="about" className="bg-[#f8fafc] py-14 sm:py-20 lg:py-28" aria-labelledby="about-title">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <SectionHeading
@@ -325,7 +325,7 @@ export function WhySection() {
 /* -------------------------- Integrations & add-ons -------------------------- */
 export function IntegrationsSection() {
   return (
-    <section id="integrations" className="bg-white py-20 sm:py-28" aria-labelledby="integrations-title">
+    <section id="integrations" className="bg-white py-14 sm:py-20 lg:py-28" aria-labelledby="integrations-title">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeading
           id="integrations-title"
@@ -333,7 +333,7 @@ export function IntegrationsSection() {
           title="Connects with the tools you already use"
           intro="Only integrations that ship in CRYZO today are listed here."
         />
-        <div className="mt-12 grid gap-6 lg:grid-cols-[1fr_1.35fr]">
+        <div className="mt-8 grid gap-6 sm:mt-12 lg:grid-cols-[1fr_1.35fr]">
           <div className="relative overflow-hidden rounded-[28px] bg-ink p-6 sm:p-8" data-reveal="left">
             <div className="lp-blob lp-blob-orange -right-20 -top-20 h-60 w-60 opacity-40" aria-hidden="true" />
             <h3 className="relative text-lg font-bold text-white">Integrations</h3>

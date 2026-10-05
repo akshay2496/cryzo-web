@@ -50,7 +50,7 @@ export default function LegalPage({ doc, kind }) {
         {/* Title band */}
         <section className="lp-hero-light pt-[72px]" aria-labelledby="legal-title">
           <div className="lp-grid-bg-light" aria-hidden="true" />
-          <div className="mx-auto max-w-7xl px-4 pb-12 pt-12 sm:px-6 sm:pt-16 lg:px-8">
+          <div className="mx-auto max-w-7xl px-4 pb-8 pt-8 sm:px-6 sm:pb-12 sm:pt-16 lg:px-8">
             <nav aria-label="Breadcrumb" className="text-sm text-slate-500">
               <ol className="flex items-center gap-2">
                 <li><a href="/" className="rounded hover:text-ink">Home</a></li>
@@ -63,7 +63,7 @@ export default function LegalPage({ doc, kind }) {
           </div>
         </section>
 
-        <div className="mx-auto grid max-w-7xl gap-10 px-4 pb-20 pt-4 sm:px-6 lg:grid-cols-[260px_1fr] lg:gap-14 lg:px-8">
+        <div className="mx-auto grid max-w-7xl gap-10 px-4 pb-14 pt-4 sm:px-6 sm:pb-20 lg:grid-cols-[260px_1fr] lg:gap-14 lg:px-8">
           {/* Table of contents */}
           <aside className="lp-no-print lg:sticky lg:top-24 lg:self-start">
             <details className="group rounded-2xl border border-slate-200 bg-white lg:hidden">
@@ -92,7 +92,7 @@ export default function LegalPage({ doc, kind }) {
             ))}
 
             {/* Related + help */}
-            <div className="lp-no-print mt-14 grid gap-4 sm:grid-cols-2">
+            <div className="lp-no-print mt-10 grid sm:mt-14 gap-4 sm:grid-cols-2">
               <a href={other.href} className="lp-card group flex items-center gap-4 p-5">
                 <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-[#fff1e3] text-brand-dark" aria-hidden="true"><other.icon size={21} /></span>
                 <span className="min-w-0 flex-1">

@@ -44,7 +44,7 @@ export default function Hero({ plans = [] }) {
       <div className="lp-grid-bg-light" aria-hidden="true" />
       <div className="lp-blob lp-blob-orange -right-40 -top-20 h-[520px] w-[520px] opacity-40" aria-hidden="true" />
 
-      <div className="mx-auto grid max-w-7xl items-center gap-12 px-4 pb-16 pt-10 sm:px-6 sm:pt-14 lg:grid-cols-[1fr_1.1fr] lg:gap-10 lg:px-8 lg:pb-24 lg:pt-16">
+      <div className="mx-auto grid max-w-7xl items-center gap-10 px-4 pb-12 pt-8 sm:gap-12 sm:px-6 sm:pb-16 sm:pt-14 lg:grid-cols-[1fr_1.1fr] lg:gap-10 lg:px-8 lg:pb-24 lg:pt-16">
         {/* Copy */}
         <div className="max-w-2xl">
           {/* H1 carries the primary keyword (eyebrow) + the headline */}

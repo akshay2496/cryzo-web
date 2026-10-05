@@ -16,7 +16,7 @@ const telHref = `tel:${BRAND.phone.replace(/\s/g, '')}`;
  * — the plans the super admin manages in the POS app. Nothing is hard-coded or calculated. */
 function PlanSkeleton() {
   return (
-    <div className="mt-12 grid gap-5 lg:grid-cols-[0.8fr_1.5fr_0.8fr]" aria-busy="true" aria-live="polite">
+    <div className="mt-8 grid gap-5 sm:mt-12 lg:grid-cols-[0.8fr_1.5fr_0.8fr]" aria-busy="true" aria-live="polite">
       <span className="sr-only">Loading plans…</span>
       {[0, 1, 2].map((i) => (
         <div key={i} className={`animate-pulse rounded-3xl p-7 ${i === 1 ? 'bg-ink' : 'border border-slate-200 bg-white'}`}>
@@ -56,7 +56,7 @@ export function PricingSection({ plansState, onChoosePlan }) {
   const current = paid.find((p) => p.id === sel) || paid[0];
 
   return (
-    <section id="pricing" className="bg-white py-20 sm:py-28" aria-labelledby="pricing-title">
+    <section id="pricing" className="bg-white py-14 sm:py-20 lg:py-28" aria-labelledby="pricing-title">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeading
           id="pricing-title"
@@ -68,7 +68,7 @@ export function PricingSection({ plansState, onChoosePlan }) {
         {status === 'loading' && <PlanSkeleton />}
 
         {(status === 'error' || (status === 'ready' && plans.length === 0)) && (
-          <div className="mt-12 grid gap-5 lg:grid-cols-[1.7fr_0.8fr]">
+          <div className="mt-8 grid gap-5 sm:mt-12 lg:grid-cols-[1.7fr_0.8fr]">
             <div className="flex flex-col items-start justify-center rounded-3xl border border-slate-200 bg-white p-7 sm:p-9" role="status">
               <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-amber-50 text-amber-700" aria-hidden="true"><AlertTriangle size={22} /></span>
               <h3 className="mt-4 text-xl font-bold text-slate-900">
@@ -89,7 +89,7 @@ export function PricingSection({ plansState, onChoosePlan }) {
         )}
 
         {status === 'ready' && plans.length > 0 && (
-          <div className={`mt-12 grid gap-5 ${trial && current ? 'lg:grid-cols-[0.8fr_1.5fr_0.8fr]' : 'lg:grid-cols-[1.6fr_0.8fr]'}`}>
+          <div className={`mt-8 grid gap-5 sm:mt-12 ${trial && current ? 'lg:grid-cols-[0.8fr_1.5fr_0.8fr]' : 'lg:grid-cols-[1.6fr_0.8fr]'}`}>
             {/* Free plan (price 0 in the API), if one is active */}
             {trial && (
               <div className="flex flex-col rounded-3xl border border-slate-200 bg-white p-6 sm:p-7" data-reveal>
@@ -171,7 +171,7 @@ export function FaqSection() {
   const [open, setOpen] = useState(0);
   const base = useId().replace(/:/g, '');
   return (
-    <section id="faq" className="bg-[#f8fafc] py-20 sm:py-28" aria-labelledby="faq-title">
+    <section id="faq" className="bg-[#f8fafc] py-14 sm:py-20 lg:py-28" aria-labelledby="faq-title">
       <div className="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-[0.8fr_1.2fr] lg:px-8">
         <div className="lg:sticky lg:top-28 lg:self-start">
           <SectionHeading id="faq-title" align="left" eyebrow="FAQ" title="Questions, answered"
@@ -319,9 +319,9 @@ export function DemoSection({ plan, onPlanChange, plans = [] }) {
   );
 
   return (
-    <section id="contact" className="relative overflow-hidden bg-white py-20 sm:py-24" aria-labelledby="cta-title">
+    <section id="contact" className="relative overflow-hidden bg-white py-14 sm:py-20 lg:py-24" aria-labelledby="cta-title">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="lp-cta-band relative overflow-hidden rounded-[32px] px-5 py-12 sm:px-10 sm:py-16 lg:px-14" data-reveal="zoom">
+        <div className="lp-cta-band relative overflow-hidden rounded-[32px] px-5 py-10 sm:px-10 sm:py-16 lg:px-14" data-reveal="zoom">
           <div className="lp-grid-bg opacity-40" aria-hidden="true" />
           <div className="absolute -right-24 -top-24 h-72 w-72 rounded-full border-[40px] border-white/10" aria-hidden="true" />
 
