@@ -25,10 +25,6 @@ export default function Footer({ onSelectOutlet, base = '' }) {
           <p className="mt-4 max-w-xs text-sm leading-relaxed text-slate-400">
             {BRAND.name} is an all-in-one restaurant POS system for billing, tables, KOTs, kitchen display, inventory and reports.
           </p>
-          {/* <div className="mt-6 flex flex-wrap gap-3">
-            <a href={`${base}#contact`} className="lp-btn lp-btn-primary !min-h-[44px] !px-4 !text-sm">Get a Free Demo</a>
-            <a href={LOGIN_URL} className="lp-btn lp-btn-ghost-dark !min-h-[44px] !px-4 !text-sm">Login</a>
-          </div> */}
         </div>
 
         <nav aria-label="Product">
